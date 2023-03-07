@@ -9,6 +9,8 @@
 .nav {
   grid-row: -1/1;
   grid-column: 1/2;
+  padding: 10.2rem;
+  height: 100vh;
 }
 .header,
 .mainContainer {
@@ -22,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   height: 10.9rem;
+  padding: 3.2rem;
 }
 
 .headerComp {
