@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import jokerImg from '../public/joker.jpg'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -22,7 +22,37 @@ export default function Home() {
             <li>Our Policy</li>
           </ul>
         </nav>
-        <h1>Hello Sir</h1>
+        <header>
+          <div className='hamIcon'>
+            <span></span>
+          </div>
+          <h1>Milan Store</h1>
+        </header>
+        <div className='main-container'>
+          <div className='newCollections'>
+            <h2>New Collections</h2>
+            <div className='products'>
+              <div className='product'>
+                <img src={jokerImg.src} alt='Joker Image' />
+                <div className='product-title'>
+                  <span className='product-title'>Gown</span>
+                  <span className='product-price'>NPR 2000</span>
+                </div>
+                <span className='product-detail'>
+                  Some description about the clothes , Its a very nice warm and
+                  cozy dress.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className='trendy-looks'>
+            <h2>Trendy Looks</h2>
+            <span>
+              Some description about the clothes , Its a very nice warm and cozy
+              dress
+            </span>
+          </div>
+        </div>
       </main>
     </>
   )
