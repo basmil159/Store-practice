@@ -23,11 +23,11 @@ export default function Home() {
           </ul>
         </nav>
         <header className={styles.header}>
-          <div>
+          <div className={styles.headerComp}>
             <div className={styles.hamIcon}></div>
             <h1>Milan Store</h1>
           </div>
-          <div>
+          <div className={styles.headerComp}>
             <span>Login</span>
             <span>Signup</span>
           </div>

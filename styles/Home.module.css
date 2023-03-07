@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: 38.5rem 1fr;
+  grid-template-columns: 54.6rem 1fr;
   gap: 0px;
   padding: 2rem;
   min-height: 100vh;
@@ -15,12 +15,44 @@
   grid-column: 2/3;
 }
 
+/* styling header */
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 10.9rem;
+}
+
+.headerComp {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.headerComp h1 {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.2rem;
+}
+
+.headerComp span {
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+}
+
 /* styling hamburger menu */
 .hamIcon,
 .hamIcon::before,
 .hamIcon::after {
-  width: 3rem;
-  height: 0.33rem;
+  width: 3.6rem;
+  height: 0.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,10 +65,10 @@
 }
 
 .hamIcon::before {
-  translate: 0 -10px;
+  translate: 0 -1.25rem;
 }
 .hamIcon::after {
-  translate: 0 10px;
+  translate: 0 1.25rem;
 }
 
 .description {
