@@ -35,14 +35,14 @@ export default function Home() {
         <div className={styles.mainContainer}>
           <div className={styles.newCollections}>
             <h2>New Collections</h2>
-            <div className='products'>
-              <div className='product'>
+            <div className={styles.products}>
+              <div className={styles.product}>
                 <img src={jokerImg.src} alt='Joker Image' />
-                <div className='product-title'>
-                  <span className='product-title'>Gown</span>
-                  <span className='product-price'>NPR 2000</span>
+                <div className={styles.productDetail}>
+                  <span className={styles.productTitle}>Gown</span>
+                  <span className={styles.productPrice}>NPR 2000</span>
                 </div>
-                <span className='product-detail'>
+                <span className={styles.productDescription}>
                   Some description about the clothes , Its a very nice warm and
                   cozy dress.
                 </span>

@@ -108,12 +108,42 @@
 }
 
 .newCollections,
-.trendy-looks {
+.trendylooks {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 6.2rem;
+  row-gap: 4.3rem;
+}
+.product {
+  width: 21rem;
+  display: flex;
+  flex-direction: column;
+}
+.productDetail {
+  display: flex;
+  font-weight: 400;
+  font-size: 2.45rem;
+  line-height: 2.9rem;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.productPrice {
+  color: #620c8b;
+}
+
+.productDescription,
+.trendylooks span {
+  color: #82e109;
+  font-size: 1.45rem;
+}
 .description {
   display: inherit;
   justify-content: inherit;
