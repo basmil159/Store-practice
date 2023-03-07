@@ -3,8 +3,8 @@
   grid-template-columns: 54.6rem 1fr;
   grid-template-rows: 10.9rem 1fr;
   gap: 0px;
-  padding: 2rem;
   min-height: 100vh;
+  transition: grid-template-columns 0.5s;
 }
 
 .header,
@@ -13,21 +13,26 @@
 }
 
 .nav {
+  transition: padding 0.8s;
   grid-row: -1/1;
   grid-column: 1/2;
   padding: 10.2rem;
-  height: 100vh;
   font-weight: 300;
   font-size: 3.4rem;
   line-height: 4rem;
   background: #620c8b;
-  text-align: end;
+  overflow: hidden;
 }
 .nav ul {
   list-style-type: none;
   color: #fff;
 }
 
+.nav ul li {
+  width: max-content;
+  margin: auto;
+  margin-right: 0;
+}
 .nav ul li:not(:first-child) {
   padding-top: 2rem;
 }
@@ -67,14 +72,21 @@
 }
 
 /* styling hamburger menu */
+
+.menuToggler {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+
 .hamIcon,
 .hamIcon::before,
 .hamIcon::after {
-  width: 3.6rem;
+  width: 100%;
   height: 0.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
+  translate: 0 1.5rem;
   background: #b31313;
 }
 
@@ -91,6 +103,7 @@
 }
 
 .mainContainer {
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   gap: 7.3rem;
@@ -115,6 +128,7 @@
 }
 
 .products {
+  transition: all 0.2s ease;
   display: flex;
   flex-wrap: wrap;
   column-gap: 6.2rem;

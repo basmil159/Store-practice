@@ -2,9 +2,25 @@ import Head from 'next/head'
 import jokerImg from '../public/joker.jpg'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
+  const [openNav, setOpenNav] = useState(true)
+  const toggleNavBar = () => {
+    let mainElement = document.getElementById('main')
+    let sidebar = document.getElementById('sidebar')
+    setOpenNav(!openNav)
+    openNav
+      ? (
+          (mainElement.style.gridTemplateColumns = '0 1fr'),
+          (sidebar.style.padding = '0 0'),
+        )
+      : (
+        (mainElement.style.gridTemplateColumns = '54.6rem 1fr'),
+        (sidebar.style.padding = '10.2rem'),
+      )
+  }
   return (
     <>
       <Head>
@@ -13,8 +29,8 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={styles.main}>
-        <nav className={styles.nav}>
+      <main id='main' className={styles.main}>
+        <nav id='sidebar' className={styles.nav}>
           <ul>
             <li>Home</li>
             <li>About Us</li>
@@ -24,7 +40,15 @@ export default function Home() {
         </nav>
         <header className={styles.header}>
           <div className={styles.headerComp}>
-            <div className={styles.hamIcon}></div>
+            <div className={styles.menuToggler} onClick={() => {
+                toggleNavBar()
+              }}>
+
+            <span
+              className={styles.hamIcon}
+              
+              ></span>
+              </div>
             <h1>Milan Store</h1>
           </div>
           <div className={styles.headerComp}>
@@ -36,17 +60,19 @@ export default function Home() {
           <div className={styles.newCollections}>
             <h2>New Collections</h2>
             <div className={styles.products}>
-              <div className={styles.product}>
-                <img src={jokerImg.src} alt='Joker Image' />
-                <div className={styles.productDetail}>
-                  <span className={styles.productTitle}>Gown</span>
-                  <span className={styles.productPrice}>NPR 2000</span>
+              {[...Array(10)].map((e, i) => (
+                <div className={styles.product} key={i}>
+                  <img src={jokerImg.src} alt='Joker Image' />
+                  <div className={styles.productDetail}>
+                    <span className={styles.productTitle}>Gown</span>
+                    <span className={styles.productPrice}>NPR 2000</span>
+                  </div>
+                  <span className={styles.productDescription}>
+                    Some description about the clothes , Its a very nice warm
+                    and cozy dress.
+                  </span>
                 </div>
-                <span className={styles.productDescription}>
-                  Some description about the clothes , Its a very nice warm and
-                  cozy dress.
-                </span>
-              </div>
+              ))}
             </div>
           </div>
           <div className={styles.trendylooks}>
