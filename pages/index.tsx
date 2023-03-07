@@ -33,9 +33,10 @@ export default function Home() {
           </div>
         </header>
         <div className={styles.mainContainer}>
-          <div className='newCollections'>
+          <div className={styles.newCollections}>
             <h2>New Collections</h2>
             <div className='products'>
+              
               <div className='product'>
                 <img src={jokerImg.src} alt='Joker Image' />
                 <div className='product-title'>
@@ -49,7 +50,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='trendy-looks'>
+          <div className={styles.trendylooks}>
             <h2>Trendy Looks</h2>
             <span>
               Some description about the clothes , Its a very nice warm and cozy

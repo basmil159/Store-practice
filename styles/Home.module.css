@@ -7,6 +7,11 @@
   min-height: 100vh;
 }
 
+.header,
+.mainContainer {
+  grid-column: 2/3;
+}
+
 .nav {
   grid-row: -1/1;
   grid-column: 1/2;
@@ -21,10 +26,6 @@
 .nav ul {
   list-style-type: none;
   color: #fff;
-}
-.header,
-.mainContainer {
-  grid-column: 2/3;
 }
 
 /* styling header */
@@ -83,6 +84,30 @@
 }
 .hamIcon::after {
   translate: 0 1.25rem;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 7.3rem;
+  padding:3.2rem 4.3rem;
+}
+
+.mainContainer h2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.3rem;
+  line-height: 2.7rem;
+  text-align: justify;
+  font-variant: small-caps;
+  color: #000000;
+}
+
+.newCollections,
+.trendy-looks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .description {
