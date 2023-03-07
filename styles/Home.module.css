@@ -1,9 +1,42 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-columns: 38.5rem 1fr;
   gap: 0px;
   padding: 2rem;
   min-height: 100vh;
+}
+
+.nav {
+  grid-row: -1/1;
+  grid-column: 1/2;
+}
+.header,
+.mainContainer {
+  grid-column: 2/3;
+}
+
+/* styling hamburger menu */
+.hamIcon,
+.hamIcon::before,
+.hamIcon::after {
+  width: 3rem;
+  height: 0.33rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #b31313;
+}
+
+.hamIcon::after,
+.hamIcon::before {
+  content: '';
+}
+
+.hamIcon::before {
+  translate: 0 -10px;
+}
+.hamIcon::after {
+  translate: 0 10px;
 }
 
 .description {

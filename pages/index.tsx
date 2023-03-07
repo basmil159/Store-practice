@@ -14,7 +14,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
-        <nav>
+        <nav className={styles.nav}>
           <ul>
             <li>Home</li>
             <li>About Us</li>
@@ -22,13 +22,17 @@ export default function Home() {
             <li>Our Policy</li>
           </ul>
         </nav>
-        <header>
-          <div className='hamIcon'>
-            <span></span>
+        <header className={styles.header}>
+          <div>
+            <div className={styles.hamIcon}></div>
+            <h1>Milan Store</h1>
           </div>
-          <h1>Milan Store</h1>
+          <div>
+            <span>Login</span>
+            <span>Signup</span>
+          </div>
         </header>
-        <div className='main-container'>
+        <div className={styles.mainContainer}>
           <div className='newCollections'>
             <h2>New Collections</h2>
             <div className='products'>
