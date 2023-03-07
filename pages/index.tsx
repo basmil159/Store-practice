@@ -36,7 +36,6 @@ export default function Home() {
           <div className={styles.newCollections}>
             <h2>New Collections</h2>
             <div className='products'>
-              
               <div className='product'>
                 <img src={jokerImg.src} alt='Joker Image' />
                 <div className='product-title'>
